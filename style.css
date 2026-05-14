@@ -29,6 +29,7 @@ body {
   border: 1px solid red;
   width: 300px;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 .poster {
   width: 250px;
