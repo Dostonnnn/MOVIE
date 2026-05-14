@@ -4,7 +4,6 @@ const load = document.createElement("span");
 load.className = "loader";
 box.appendChild(load);
 function getData(api) {
-  load.innerHTML = " .";
   fetch(api, {
     method: "GET",
   })
