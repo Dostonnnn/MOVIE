@@ -1,14 +1,16 @@
 const api = `https://www.omdbapi.com/?s=Panda&apikey=c65fcde9&`;
 const box = document.querySelector(".box");
-
+const load = document.createElement("span");
+load.className = "loader";
+box.appendChild(load);
 function getData(api) {
-  box.innerHTML = "Loading...";
+  load.innerHTML = " .";
   fetch(api, {
     method: "GET",
   })
     .then((response) => response.json())
     .then((data) => {
-      box.innerHTML = "";
+      load.style.display = "none";
       showData(data);
     })
     .catch((error) => console.log(error))
