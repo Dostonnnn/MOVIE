@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.box {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  gap: 50px;
+}
+body {
+  background-color: brown;
+}
+.card {
+  padding: 40px;
+  border-radius: 8px;
+  background-color: bisque;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 300px;
+  transition: all 0.3s linear;
+}
+.poster {
+  width: 250px;
+  height: 300px;
+  border-radius: 8px;
+}
+.title,
+.year {
+  color: brown;
+}
+.year,
+.type {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.type {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
