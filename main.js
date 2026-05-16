@@ -1,4 +1,4 @@
-const api = `https://www.omdbapi.com/?s=Panda&apikey=c65fcde9&`;
+const api = `https://www.omdbapi.com/?s=pacific&apikey=c65fcde9&`;
 const box = document.querySelector(".box");
 const load = document.createElement("span");
 const input = document.querySelector(".search");
