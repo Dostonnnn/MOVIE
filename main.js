@@ -1,6 +1,8 @@
 const api = `https://www.omdbapi.com/?s=Panda&apikey=c65fcde9&`;
 const box = document.querySelector(".box");
 const load = document.createElement("span");
+const input = document.querySelector(".search");
+const form = document.querySelector("form");
 load.className = "loader";
 box.appendChild(load);
 function getData(api) {
@@ -37,3 +39,19 @@ function showData(movie) {
     box.appendChild(card);
   });
 }
+function findMovie() {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    input.style.width = "250px";
+    const movieName = input.value.trim();
+    const answer = `https://www.omdbapi.com/?s=${movieName}&apikey=c65fcde9&`;
+    fetch(answer)
+      .then((response) => response.json())
+      .then((data) => {
+        box.innerHTML = "";
+        showData(data);
+      })
+      .catch((error) => console.log(error));
+  });
+}
+findMovie();
